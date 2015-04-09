@@ -10,7 +10,7 @@ var instance = WScript.Arguments.Item(0);
 function getWMISQLDatabases(instance) {
 	var result = new Array();
 	var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
-  	var wql = "SELECT Name FROM Win32_PerfFormattedData_MSSQL" + instance + "_MSSQL" + instance + "Databases" + " " + "WHERE NOT Name LIKE '%master%' and NOT Name LIKE '%tempdb%' and NOT Name LIKE '%model%' and NOT Name LIKE '%msdb%'";
+  	var wql = "SELECT Name FROM Win32_PerfFormattedData_MSSQL" + instance + "_MSSQL" + instance + "Databases" + " " + "WHERE NOT Name LIKE '%master%' and NOT Name LIKE '%tempdb%' and NOT Name LIKE '%model%' and NOT Name LIKE '%msdb%' and NOT Name LIKE '%mssqlsystemresource%' and NOT Name LIKE '%_Total%'";
   	for ( var e = new Enumerator(wmi.ExecQuery(wql)); !e.atEnd(); e.moveNext() )
   		result.push(e.item().Name);
   	return result;
