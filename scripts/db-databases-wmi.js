@@ -24,6 +24,9 @@ switch(counter) {
   case 'Transactions':
     WScript.Echo(PERF_DATABASE_TRANSACTIONS_RAWCOUNT(instance,property));
   break;
+  case 'Jobs':
+    WScript.Echo(PERF_INSTANCE_JOBS_RAWCOUNT(instance,property));
+  break;
   default:
     WScript.Quit(1);  
 }
@@ -74,6 +77,15 @@ function PERF_DATABASE_TRANSACTIONS_RAWCOUNT(instance,property) {
   
 }
 
+//Query the SQL Jobs counter
+function PERF_INSTANCE_JOBS_RAWCOUNT(instance,property) {
+
+    var data = GET_INSTANCE_JOBS_COUNTER(instance,property);
+  if (data)
+    return data[property];
+
+}
+
 //
 function GET_DATABASE_DATABASES_COUNTER(instance,database,property){
     var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
@@ -121,6 +133,14 @@ function GET_DATABASE_SQLERRORS_COUNTER(instance,property){
 function GET_DATABASE_TRANSACTIONS_COUNTER(instance,property){
     var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
     var wql = "SELECT " + property + " FROM Win32_PerfFormattedData_MSSQL" + instance + "_MSSQL" + instance + "Transactions";
+    for ( var e = new Enumerator(wmi.ExecQuery(wql)); !e.atEnd(); e.moveNext() )
+      return e.item();
+}
+
+//Query SQL Jobs counter
+function GET_INSTANCE_JOBS_COUNTER(instance,property){
+    var wmi = GetObject("winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2");
+    var wql = "SELECT " + property + " FROM Win32_PerfFormattedData_SQLAgent" + instance + "_SQLAgent" + instance + "Jobs" + " WHERE Name=" + "'" + "_Total" + "'";
     for ( var e = new Enumerator(wmi.ExecQuery(wql)); !e.atEnd(); e.moveNext() )
       return e.item();
 }
