@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-04-22T11:00:44Z</date>
+    <date>2016-04-22T11:26:39Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -32,6 +32,9 @@
                 </application>
                 <application>
                     <name>SQLJobs</name>
+                </application>
+                <application>
+                    <name>SQLLocks</name>
                 </application>
                 <application>
                     <name>Transactions</name>
@@ -290,7 +293,7 @@
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
-                            <name>SQLJobs</name>
+                            <name>SQLLocks</name>
                         </application>
                     </applications>
                     <valuemap/>
