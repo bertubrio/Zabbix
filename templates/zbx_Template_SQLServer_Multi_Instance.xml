@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-11-26T12:05:27Z</date>
+    <date>2016-04-22T11:00:44Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -39,17 +39,275 @@
             </applications>
             <items>
                 <item>
-                    <name>SQL Instance {$INSTANCE}: MemoryManager - ConnectionMemory</name>
-                    <type>7</type>
+                    <name>SQL Instance {$INSTANCE}: BufferManager - Buffercachehitratio</name>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,ConnectionMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,BufferManager,Buffercachehitratio]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: BufferManager - CheckpointpagesPersec</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,BufferManager,CheckpointpagesPersec]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>pages</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: BufferManager - Pagelifeexpectancy</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,BufferManager,Pagelifeexpectancy]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>s</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: GeneralStatistics - Processesblocked</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,GeneralStatistics,Processesblocked]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>processes</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: GeneralStatistics - UserConnections</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,GeneralStatistics,UserConnections]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>connections</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: Locks - LockWaitsPersec</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,Locks,LockWaitsPersec]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>locks/sec</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>SQLJobs</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: MemoryManager - ConnectionMemory</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,ConnectionMemoryKB]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -83,16 +341,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - DatabaseCacheMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,DatabaseCacheMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,DatabaseCacheMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -126,16 +384,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - FreeMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,FreeMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,FreeMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -169,16 +427,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - MaximumWorkspaceMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,MaximumWorkspaceMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,MaximumWorkspaceMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -212,16 +470,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - SQLCacheMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,SQLCacheMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,SQLCacheMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -255,16 +513,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - StolenServerMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,StolenServerMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,StolenServerMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -298,16 +556,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: MemoryManager - TargetServerMemory</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,MemoryManager,TargetServerMemoryKB]</key>
+                    <key>db.databases[{$INSTANCE},,MemoryManager,TargetServerMemoryKB]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>B</units>
                     <delta>0</delta>
@@ -341,7 +599,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - Analysis Services</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -350,7 +608,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -386,7 +644,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - Integration Services</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -395,7 +653,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -431,7 +689,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - Reporting Services</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -440,7 +698,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -476,7 +734,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - SQL Agent</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -485,7 +743,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -521,7 +779,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - SQL Browser</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -530,7 +788,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -566,7 +824,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - SQL Server</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -575,7 +833,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -611,7 +869,7 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Service State - SQL Writer</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
@@ -620,7 +878,7 @@
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units/>
                     <delta>0</delta>
@@ -656,16 +914,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLErrors - DB Offline Errors</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,SQLErrors,DB Offline Errors]</key>
+                    <key>db.databases[{$INSTANCE},,SQLErrors,DB Offline Errors]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ErrorsPerSec</units>
                     <delta>0</delta>
@@ -699,16 +957,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLErrors - Info Errors</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,SQLErrors,Info Errors]</key>
+                    <key>db.databases[{$INSTANCE},,SQLErrors,Info Errors]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ErrorsPerSec</units>
                     <delta>0</delta>
@@ -742,16 +1000,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLErrors - Kill Connection Errors</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,SQLErrors,Kill Connection Errors]</key>
+                    <key>db.databases[{$INSTANCE},,SQLErrors,Kill Connection Errors]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ErrorsPerSec</units>
                     <delta>0</delta>
@@ -785,16 +1043,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLErrors - Total</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,SQLErrors,_Total]</key>
+                    <key>db.databases[{$INSTANCE},,SQLErrors,_Total]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ErrorsPerSec</units>
                     <delta>0</delta>
@@ -828,16 +1086,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLErrors - Users Errors</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,SQLErrors,User Errors]</key>
+                    <key>db.databases[{$INSTANCE},,SQLErrors,User Errors]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ErrorsPerSec</units>
                     <delta>0</delta>
@@ -871,16 +1129,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLJobs - Active</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Jobs,Activejobs]</key>
+                    <key>db.databases[{$INSTANCE},,Jobs,Activejobs]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>ActiveJobs</units>
                     <delta>0</delta>
@@ -914,16 +1172,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLJobs - Failed</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Jobs,Failedjobs]</key>
+                    <key>db.databases[{$INSTANCE},,Jobs,Failedjobs]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>FailedJobs</units>
                     <delta>0</delta>
@@ -957,16 +1215,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLJobs - SuccessfulJobs</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Jobs,Successfuljobs]</key>
+                    <key>db.databases[{$INSTANCE},,Jobs,Successfuljobs]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>SuccessfulJobs</units>
                     <delta>0</delta>
@@ -1000,11 +1258,11 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: SQLJobs - SuccessRate</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Jobs,Jobsuccessrate]</key>
+                    <key>db.databases[{$INSTANCE},,Jobs,Jobsuccessrate]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -1042,12 +1300,141 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>SQL Instance {$INSTANCE}: Transactions - LongestTransactionRunning</name>
-                    <type>7</type>
+                    <name>SQL Instance {$INSTANCE}: SQLStatistics - BatchRequestsPersec</name>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Transactions,LongestTransactionRunning]</key>
+                    <key>db.databases[{$INSTANCE},,SQLStatistics,BatchRequestsPersec]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>BatchRequests/sec</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: SQLStatistics - SQLCompilationsPersec</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,SQLStatistics,SQLCompilationsPersec]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>SQLCompilations/sec</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: SQLStatistics - SQLReCompilationsPersec</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,SQLStatistics,SQLReCompilationsPersec]</key>
+                    <delay>300</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>SQLReCompilations/sec</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MemoryManager</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>SQL Instance {$INSTANCE}: Transactions - LongestTransactionRunning</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>db.databases[{$INSTANCE},,Transactions,LongestTransactionRunning]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
@@ -1086,16 +1473,16 @@
                 </item>
                 <item>
                     <name>SQL Instance {$INSTANCE}: Transactions - Total Transactions</name>
-                    <type>7</type>
+                    <type>0</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>db.databases.wmi[{$INSTANCE},,Transactions,Transactions]</key>
+                    <key>db.databases[{$INSTANCE},,Transactions,Transactions]</key>
                     <delay>300</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>Transactions</units>
                     <delta>0</delta>
@@ -1168,7 +1555,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>db.databases.wmi[{$INSTANCE},{#DBNAME},Databases,ActiveTransactions]</key>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},Databases,ActiveTransactions]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -1211,7 +1598,7 @@
                             <snmp_community/>
                             <multiplier>1</multiplier>
                             <snmp_oid/>
-                            <key>db.databases.wmi[{$INSTANCE},{#DBNAME},Databases,DataFilesSizeKB]</key>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},Databases,DataFilesSizeKB]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -1254,7 +1641,7 @@
                             <snmp_community/>
                             <multiplier>1</multiplier>
                             <snmp_oid/>
-                            <key>db.databases.wmi[{$INSTANCE},{#DBNAME},Databases,LogFilesSizeKB]</key>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},Databases,LogFilesSizeKB]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -1297,7 +1684,7 @@
                             <snmp_community/>
                             <multiplier>1</multiplier>
                             <snmp_oid/>
-                            <key>db.databases.wmi[{$INSTANCE},{#DBNAME},Databases,LogFilesUsedSizeKB]</key>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},Databases,LogFilesUsedSizeKB]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -1340,7 +1727,7 @@
                             <snmp_community/>
                             <multiplier>0</multiplier>
                             <snmp_oid/>
-                            <key>db.databases.wmi[{$INSTANCE},{#DBNAME},State,]</key>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},State,]</key>
                             <delay>300</delay>
                             <history>7</history>
                             <trends>365</trends>
@@ -1377,6 +1764,49 @@
                             <valuemap>
                                 <name>MS SQL Server database state</name>
                             </valuemap>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>TransactionsPerSec of {#DBNAME} in instance {$INSTANCE}</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>db.databases[{$INSTANCE},{#DBNAME},Databases,TransactionsPerSec]</key>
+                            <delay>300</delay>
+                            <history>7</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units>transactions/sec</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Databases</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
                             <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
