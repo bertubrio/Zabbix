@@ -1,0 +1,20 @@
+1. Create two UserParameters into the Zabbix Agent config file:
+
+  UserParameter=db.discovery[*],cscript "C:\Program Files\Zabbix\scripts\db-discovery.js" $1 //nologo
+  UserParameter=db.databases[*],cscript "C:\Program Files\Zabbix\scripts\db-databases.js" "$1" "$2" "$3" "$4" //nologo
+
+2. Restart the Zabbix Agent
+3. Create a Value mapping called "MS SQL Server database state" following the details below:
+  
+  0 ⇒ ONLINE
+  1 ⇒ RESTORING
+  2 ⇒ RECOVERING
+  3 ⇒ RECOVERY_PENDING
+  4 ⇒ SUSPECT
+  5 ⇒ EMERGENCY
+  6 ⇒ OFFLINE
+  7 ⇒ COPYING
+  10 ⇒ OFFLINE_SECONDARY
+  
+4. Import Template_SQLServer_Multi_Instance
+5. Enjoy :)
