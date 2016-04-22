@@ -17,4 +17,9 @@
   10 ⇒ OFFLINE_SECONDARY
   
 4. Import Template_SQLServer_Multi_Instance
-5. Enjoy :)
+5. Add a new host and link it to the template
+6. Create a Macro in the host {$INSTANCE} --> SQL2014TEST
+7. Enjoy :)
+
+PD: if you have more than one instance, you must create other Macros in the host and furthermore add new items key in the Template as the example below:
+db.databases[{$INSTANCEX},,BufferManager,CheckpointpagesPersec]
